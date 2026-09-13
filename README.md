@@ -1,4 +1,5 @@
 # NYU3DPQ
+(NYU 3D Print Queue)
 ## What and why?
 Currently, NYU students in Manhattan must go to the NYU Tandon MakerSpace in Brooklyn to print 3D models. I am proposing an online 3D print request system, where students in Manhattan can upload 3D models. Students who make the trip could then include these other prints alongside their own, and print them all simultaneously. They could then take them back to Manhattan once complete. Think of it similarly to a carpool-coordination system.
 
