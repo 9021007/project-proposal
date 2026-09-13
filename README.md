@@ -1,13 +1,12 @@
-# Reamos - Native Pharos Driver
-![Reamos listed as a printer in a native print dialogue](mdfiles/image.png)
+# NYU3DPQ
 ## What and why?
-I am proposing a project that would integrate a Pharos print queue into a native driver. This would allow a user to use the built-in print menu to add a document to the online queue, instead of needing to manually upload the file to the print queue website. Exporting each document, then uploading to a portal is tedious, frustrating, and storage-consuming. Using a native driver would bypass this, making printing much more convenient.
+Currently, NYU students in Manhattan must go to the NYU Tandom MakerSpace in Brooklyn to print 3D models. I am proposing an online 3D print request system, where students in Manhattan can upload 3D models. Students who make the trip could then include these other prints alongside their own, and print them all simultaneously. They could then take them back to Manhattan once complete. Think of it similarly to a carpool-coordination system.
 
 ## For whom?
-This is useful for enterprise environments, such as schools or businesses, where users may have to deal with an online Pharos portal for uploading to their print queue.
+This is useful for NYU students/faculty/staff in Manhattan, but could also easily be adapted for other universities or organizations that have a similar issue.
 
 ## How?
-Once installed, a singular "Reamos" printer would appear as a printer from within the user's applications. When a user selects the "printer" and "prints" a document to it, the document is actually uploaded to the queue. Then, the user can walk over to a nearby printer, and release the document using their ID card as normal.
+A user would log in with their NYU login, then upload a 3D model, alongside their desired material/infill/etc. They would also be able to see a list of who else has requested a print. Logged in users could also download the files of others, so that they could print them alongside their own prints in Brooklyn.
 
 ## Scope
-The project would essentially involve two major hurdles to be solved - one hurdle is turning the document being printed into a PDF, and the other hurdle is authenticating the user with Pharos. Other developers have already created "Print to PDF" drivers, so we know for certain that the first hurdle is feasible. The second one may be difficult, but ultimately there is always the route of simply popping up a browser window to sign in, if no other method proves to be possible.
+This project would have a couple issues to consider. First and foremost is the handling of NYU authentication. I believe that the best approach for this is to use SSO through one of NYU's existing identity providers, such as Microsoft or Google. The other primary consideration I have is with file storage. Whichever server is hosting the website would require some amount of free space, and also a way to properly manage the files automatically (i.e. deleting after expiration, print, etc). I certainly believe that this could be completed by a group of 4-6 students in 1 semester.
